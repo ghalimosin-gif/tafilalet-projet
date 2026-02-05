@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administration - Assistance Routière</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="app-header">
+        <div class="header-content">
+            <div class="header-left">
+                <div class="logo-small">
+                    <svg viewBox="0 0 100 100" width="40" height="40"><img src="data:image/png;base64,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">
+                    </svg>
+                </div>
+                <h1>Assistance TAFILALET - Administration</h1>
+            </div>
+            <div class="header-right">
+                <span class="user-info">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="12" cy="7" r="4"></circle>
+                    </svg>
+                    <span id="userFullName">Admin</span>
+                </span>
+                <button type="button" id="logoutBtn" class="btn btn-secondary">Déconnexion</button>
+            </div>
+        </div>
+    </header>
+
+    <div class="admin-layout">
+        <aside class="sidebar">
+            <nav class="sidebar-nav">
+                <a href="#dashboard" class="nav-item active">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="3" y="3" width="7" height="7"></rect>
+                        <rect x="14" y="3" width="7" height="7"></rect>
+                        <rect x="14" y="14" width="7" height="7"></rect>
+                        <rect x="3" y="14" width="7" height="7"></rect>
+                    </svg>
+                    Tableau de bord
+                </a>
+                <a href="#missions" class="nav-item">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                        <polyline points="14 2 14 8 20 8"></polyline>
+                        <line x1="16" y1="13" x2="8" y2="13"></line>
+                        <line x1="16" y1="17" x2="8" y2="17"></line>
+                        <polyline points="10 9 9 9 8 9"></polyline>
+                    </svg>
+                    Missions
+                </a>
+                <a href="#users" class="nav-item">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="9" cy="7" r="4"></circle>
+                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                    </svg>
+                    Utilisateurs
+                </a>
+            </nav>
+        </aside>
+
+        <main class="admin-content">
+            <!-- Dashboard Tab -->
+            <div id="dashboardTab" class="tab-content active">
+                <h2>Tableau de bord</h2>
+                
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon red">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                <polyline points="14 2 14 8 20 8"></polyline>
+                            </svg>
+                        </div>
+                        <div class="stat-info">
+                            <div class="stat-label">Total Missions</div>
+                            <div class="stat-value" id="totalMissions">20</div>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-icon blue">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="9" cy="7" r="4"></circle>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                            </svg>
+                        </div>
+                        <div class="stat-info">
+                            <div class="stat-label">Chauffeurs actifs</div>
+                            <div class="stat-value" id="totalDrivers">0</div>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-icon green">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                                <line x1="16" y1="2" x2="16" y2="6"></line>
+                                <line x1="8" y1="2" x2="8" y2="6"></line>
+                                <line x1="3" y1="10" x2="21" y2="10"></line>
+                            </svg>
+                        </div>
+                        <div class="stat-info">
+                            <div class="stat-label">Missions aujourd'hui</div>
+                            <div class="stat-value" id="todayMissions">0</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dashboard-grid">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>Missions récentes</h3>
+                        </div>
+                        <div id="recentMissions" class="recent-missions-list">
+                            <div class="loading">Chargement...</div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>Services par type</h3>
+                        </div>
+                        <div id="serviceStats" class="service-stats">
+                            <div class="loading">Chargement...</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Missions Tab -->
+            <div id="missionsTab" class="tab-content">
+                <div class="tab-header">
+                    <h2>Gestion des Missions</h2>
+                    <button type="button" id="exportCsvBtn" class="btn btn-primary">
+                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                            <polyline points="7 10 12 15 17 10"></polyline>
+                            <line x1="12" y1="15" x2="12" y2="3"></line>
+                        </svg>
+                        Exporter CSV
+                    </button>
+                </div>
+
+                <div class="card">
+                    <div class="filters-bar">
+                        <input 
+                            type="text" 
+                            id="missionSearch" 
+                            placeholder="Rechercher..." 
+                            onkeyup="filterMissions()"
+                        >
+                        <input 
+                            type="date" 
+                            id="startDate" 
+
+                        >
+                        <input 
+                            type="date" 
+                            id="endDate" 
+                        >
+                        <select id="serviceFilter">
+                            <option value="">Tous les services</option>
+                            <option value="Remorquage">Remorquage</option>
+                            <option value="Dépannage batterie">Dépannage batterie</option>
+                            <option value="Dépannage pneu">Dépannage pneu</option>
+                            <option value="Dépannage mécanique">Dépannage mécanique</option>
+                            <option value="Panne d'essence">Panne d'essence</option>
+                            <option value="Ouverture de porte">Ouverture de porte</option>
+                            <option value="Accident">Accident</option>
+                            <option value="Autre">Autre</option>
+                        </select>
+                    </div>
+
+                    <div id="missionsTable" class="table-container">
+                        <div class="loading">Chargement des missions...</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Users Tab -->
+            <div id="usersTab" class="tab-content">
+                <div class="tab-header">
+                    <h2>Gestion des Utilisateurs</h2>
+                    <button type="button" id="addUserBtn" class="btn btn-primary">
+                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="12" y1="5" x2="12" y2="19"></line>
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                        </svg>
+                        Ajouter Utilisateur
+                    </button>
+                </div>
+
+                <div class="card">
+                    <div id="usersTable" class="table-container">
+                        <div class="loading">Chargement des utilisateurs...</div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Edit Mission Modal -->
+    <div id="editMissionModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Modifier la Mission</h3>
+                <button type="button" class="btn-close" data-action="close-edit">×</button>
+            </div>
+            <form id="editMissionForm">
+                <input type="hidden" id="editMissionId">
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="editMissionDate">Date *</label>
+                        <input type="date" id="editMissionDate" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="editMissionTime">Heure *</label>
+                        <input type="time" id="editMissionTime" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="editServiceType">Type de service *</label>
+                    <select id="editServiceType" required>
+                        <option value="Remorquage">Remorquage</option>
+                        <option value="Dépannage batterie">Dépannage batterie</option>
+                        <option value="Dépannage pneu">Dépannage pneu</option>
+                        <option value="Dépannage mécanique">Dépannage mécanique</option>
+                        <option value="Panne d'essence">Panne d'essence</option>
+                        <option value="Ouverture de porte">Ouverture de porte</option>
+                        <option value="Accident">Accident</option>
+                        <option value="Autre">Autre</option>
+                    </select>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="editVehicleRegistration">Immatriculation *</label>
+                        <input type="text" id="editVehicleRegistration" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="editVehicleModel">Modèle *</label>
+                        <input type="text" id="editVehicleModel" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="editDepartureLocation">Lieu de départ *</label>
+                    <input type="text" id="editDepartureLocation" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="editArrivalLocation">Lieu d'arrivée *</label>
+                    <input type="text" id="editArrivalLocation" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="editObservations">Observations</label>
+                    <textarea id="editObservations" rows="3"></textarea>
+                </div>
+
+                <div class="modal-actions">
+                    <button type="button" class="btn btn-secondary" data-action="close-edit">
+                        Annuler
+                    </button>
+                    <button type="submit" class="btn btn-primary">
+                        Enregistrer
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Add User Modal -->
+    <div id="addUserModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Ajouter un Utilisateur</h3>
+                <button type="button" class="btn-close" data-action="close-add-user">×</button>
+            </div>
+            <form id="addUserForm">
+                <div class="form-group">
+                    <label for="newUsername">Nom d'utilisateur *</label>
+                    <input type="text" id="newUsername" required minlength="3">
+                </div>
+
+                <div class="form-group">
+                    <label for="newPassword">Mot de passe *</label>
+                    <input type="password" id="newPassword" required minlength="6">
+                </div>
+
+                <div class="form-group">
+                    <label for="newFullName">Nom complet *</label>
+                    <input type="text" id="newFullName" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="newRole">Rôle *</label>
+                    <select id="newRole" required>
+                        <option value="driver">Chauffeur</option>
+                        <option value="admin">Administrateur</option>
+                    </select>
+                </div>
+
+                <div class="modal-actions">
+                    <button type="button" class="btn btn-secondary" data-action="close-add-user">
+                        Annuler
+                    </button>
+                    <button type="submit" class="btn btn-primary">
+                        Créer
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="auth.js"></script>
+    <script src="admin.js"></script>
+</body>
+</html>

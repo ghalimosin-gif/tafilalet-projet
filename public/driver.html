@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tableau de Bord - Chauffeur</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="app-header">
+        <div class="header-content">
+            <div class="header-left">
+                <div class="logo-small">
+                    <svg viewBox="0 0 100 100" width="40" height="40">
+                     <img src="data:image/png;base64,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">
+                      </svg>
+                </div>
+                <h1>Assistance TAFILALET</h1>
+            </div>
+            <div class="header-right">
+                <span class="user-info">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="12" cy="7" r="4"></circle>
+                    </svg>
+                    <span id="userFullName">Chauffeur</span>
+                </span>
+                <button type="button" id="logoutBtn" class="btn btn-secondary">Déconnexion</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="dashboard-header">
+            <h2>Mes Missions</h2>
+            <button type="button" id="newMissionBtn" class="btn btn-primary">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                </svg>
+                Nouvelle Mission
+            </button>
+        </div>
+
+        <!-- New Mission Form (Initially Hidden) -->
+        <div id="missionFormContainer" class="card" style="display: none;">
+            <div class="card-header">
+                <h3>Ajouter une Nouvelle Mission</h3>
+                <button type="button" class="btn-close" data-action="close-new-mission">×</button>
+            </div>
+            <form id="missionForm" class="mission-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="missionDate">Date de la mission</label>
+                        <input type="date" id="missionDate" name="missionDate">
+                    </div>
+                    <div class="form-group">
+                        <label for="missionTime">Heure</label>
+                        <input type="time" id="missionTime" name="missionTime">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="serviceType">Type de service / dépannage *</label>
+                    <select id="serviceType" name="serviceType" required>
+                        <option value="">Sélectionnez un service</option>
+                        <option value="Remorquage">Remorquage</option>
+                        <option value="TAXI">TAXI</option>
+                        <option value="Ambulance">Ambulance</option>
+                    </select>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="vehicleRegistration" id="labelVehicleRegistration">Immatriculation du véhicule</label>
+                        <input type="text" id="vehicleRegistration" name="vehicleRegistration" 
+                               placeholder="Ex: 12345-A-67">
+                    </div>
+                    <div class="form-group">
+                        <label for="vehicleModel" id="labelVehicleModel">Modèle du véhicule</label>
+                        <input type="text" id="vehicleModel" name="vehicleModel" 
+                               placeholder="Ex: Renault Clio">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="departureLocation">Lieu de départ</label>
+                    <input type="text" id="departureLocation" name="departureLocation" 
+                           placeholder="Adresse ou localisation de départ">
+                </div>
+
+                <div class="form-group">
+                    <label for="arrivalLocation">Lieu d'arrivée</label>
+                    <input type="text" id="arrivalLocation" name="arrivalLocation" 
+                           placeholder="Adresse ou localisation d'arrivée">
+                </div>
+
+                <div class="form-group">
+                    <label for="observations">Observations / Notes</label>
+                    <textarea id="observations" name="observations" rows="4" 
+                              placeholder="Informations supplémentaires, détails particuliers..."></textarea>
+                </div>
+
+                <div id="formError" class="error-message" style="display: none;"></div>
+                <div id="formSuccess" class="success-message" style="display: none;"></div>
+
+                <div class="form-actions">
+                    <button type="button" class="btn btn-secondary" data-action="close-new-mission">
+                        Annuler
+                    </button>
+                    <button type="submit" class="btn btn-primary">
+                        Enregistrer la mission
+                    </button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Missions List -->
+        <div class="card">
+            <div class="card-header">
+                <h3>Historique des missions</h3>
+            </div>
+            <div class="search-bar">
+                <input 
+                    type="text" 
+                    id="searchInput" 
+                    placeholder="Rechercher par immatriculation, modèle, lieu..."
+                >
+            </div>
+            <div id="missionsContainer" class="missions-list">
+                <div class="loading">Chargement des missions...</div>
+            </div>
+        </div>
+    </main>
+
+    <script src="auth.js"></script>
+    <script src="driver.js"></script>
+</body>
+</html>
