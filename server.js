@@ -5,6 +5,7 @@
 
 require('dotenv').config();
 require('./init-db');
+app.set('trust proxy', 1);
 
 const express = require('express');
 const session = require('express-session');
@@ -16,6 +17,8 @@ const { body, validationResult } = require('express-validator');
 const path = require('path');
 
 const app = express();
+app.set('trust proxy', 1);
+
 const PORT = process.env.PORT || 3000;
 const db = new Database(process.env.DB_PATH || './database.db');
 
@@ -65,14 +68,18 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // Session middleware
+app.set('trust proxy', 1);
+
 app.use(session({
-  secret: process.env.SESSION_SECRET || 'change-this-secret',
+  name: 'towing.sid',
+  secret: process.env.SESSION_SECRET || '42cf57fe172a13ce86fbabfb123f4e1d97f6b5365e9bba0df7115399a32d5791t',
   resave: false,
   saveUninitialized: false,
   cookie: {
-    secure: process.env.NODE_ENV === 'production',
+    secure: true,               // REQUIRED on Render
     httpOnly: true,
-    maxAge: 24 * 60 * 60 * 1000 // 24 hours
+    sameSite: 'none',           // REQUIRED for proxy + HTTPS
+    maxAge: 24 * 60 * 60 * 1000
   }
 }));
 
