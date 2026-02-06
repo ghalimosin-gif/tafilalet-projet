@@ -5,8 +5,6 @@
 
 require('dotenv').config();
 require('./init-db');
-app.set('trust proxy', 1);
-
 const express = require('express');
 const session = require('express-session');
 const bcrypt = require('bcryptjs');
