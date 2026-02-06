@@ -4,6 +4,8 @@
  */
 
 require('dotenv').config();
+require('./init-db');
+
 const express = require('express');
 const session = require('express-session');
 const bcrypt = require('bcryptjs');
@@ -415,8 +417,8 @@ app.get('/api/missions/export/csv', requireAdmin, (req, res) => {
 
     // Create CSV
     const headers = [
-      'ID', 'Date', 'Time', 'Driver', 'Service Type', 
-      'Vehicle Registration', 'Vehicle Model', 'Departure', 
+      'ID', 'Date', 'Time', 'Driver', 'Service Type',
+      'Vehicle Registration', 'Vehicle Model', 'Departure',
       'Arrival', 'Observations', 'Created At'
     ];
 
